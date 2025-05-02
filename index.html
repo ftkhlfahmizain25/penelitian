@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Penelitian Aku</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    h1 {
+      color: #e75480;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #e75480;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #cc3366;
+    }
+
+    #response {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #28a745;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      font-size: 50px;
+      color: red;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hai, Abel 👋</h1>
+  <p>
+    Aku udah coba segala macam algoritma, looping, bahkan AI...  
+    Tapi hasil akhirnya cuma satu:  
+    <br><strong><code>I want to be with you ❤️</code></strong>
+  </p>
+
+  <p>
+    Jadi, izinkan aku jadi pasanganmu.  😄
+  </p>
+
+  <button class="btn" onclick="acceptLove()">Aku Mau 💞</button>
+  <button class="btn" onclick="thinkFirst()">Aku Pikir Dulu 🤔</button>
+
+  <div id="response"></div>
+
+  <script>
+    function acceptLove() {
+      document.getElementById("response").innerHTML = `
+        <div class="heart">❤️</div>
+        <p>YAY! Kita officially <strong>git commit -m "in relationship"</strong> 😍</p>
+      `;
+    }
+
+    function thinkFirst() {
+      document.getElementById("response").innerHTML = `
+        <p>Gak apa-apa, aku bakal <em>waitForResponse()</em> sampai kamu siap 😊</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
